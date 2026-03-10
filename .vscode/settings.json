@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "**/*.exe": true
+        
+    },
+    "search.exclude": {
+        "**/*.exe": true
+    }
+}
+
+// ye code har baar exe nhhi banata hai , all exe will get automatically reoved

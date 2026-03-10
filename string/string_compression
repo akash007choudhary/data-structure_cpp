@@ -1,0 +1,37 @@
+// class Solution {
+// public:
+//     int compress(vector<char>& chars) {
+//         int n = chars.size();
+//         int indx = 0;
+
+//   easy part : -> to calc count ;
+
+//         for (int i = 0; i < n; i++) {
+//             char ch = chars[i];
+//             int count = 0;
+//             while (i < n && chars[i] == ch) {
+//                 count++;
+//                 i++;
+//             }if (count == 1) {
+//                 chars[indx++] = ch;
+//             }
+
+//                LITTLE LOGICAL  THING
+//                else {
+//                 chars[indx++] =ch;
+
+//               string str = to_string(count);
+//              for (char dig : str) {
+//              chars[indx++] = dig;
+//             }
+//             }
+//              i--;          
+//                      }
+//              chars.resize(indx);    
+//  chars.resize(indx) removes leftover characters beyond that length so the vector matches the correct output
+//              return indx;
+//                  }
+//              };
+
+// TO CONVERT THE COUNT INTO CHARACTERS  exmple teh coutn is 12 then charcater it store "1" and "2";  and use ek string amin store krega then iterate over that string to add those charcaters itno the  charcahter aray
+////  uper jo i++ kr rhe wo last wale itertaor ke baad ek extra add hoag to use hatane ke liye ye krr he

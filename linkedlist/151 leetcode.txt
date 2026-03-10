@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    string reverseWords(string s) {
+        int n = s.length();
+        string ans = "";
+
+        // Step 1: reverse the entire string
+        reverse(s.begin(), s.end());
+
+        int i = 0;
+        while (i < n) {
+            if (s[i] == ' ') {
+                i++;
+                continue; // skip extra spaces until we find a word and when we found one tab word create karega ;
+            }
+
+            string word = "";
+            while (i < n && s[i] != ' ') {
+                word += s[i];
+                i++;
+            }
+
+            // Step 2: reverse each word to correct its letters
+            reverse(word.begin(), word.end());
+
+            // Step 3: add it to answer with a space in between
+            if (!ans.empty()) ans += " ";
+            ans += word;
+        }
+
+        return ans;
+    }
+};
