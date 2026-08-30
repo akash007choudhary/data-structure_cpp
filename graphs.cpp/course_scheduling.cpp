@@ -54,7 +54,7 @@
 //         for(auto &p : adj) {
 
 //             int node = p.first;
-
+ 
 //             if(!vis[node]) {
 //                 if(iscycledfs(node, adj, vis, recpath)) {
 //                     return false;
@@ -87,7 +87,8 @@
 //                 }
             
 //         }
-//         recpath[src]=false;
+//         recpath[src]=false;      
+  // ye krna hota kyunki jab backreack krenge to recursive path se hata dnege 
 //         return false;
 //     }
 //     bool canFinish(int n, vector<vector<int>>& edges) {
@@ -110,3 +111,7 @@
 //           return true;
 //     }
 // };
+
+
+// we look for cycle because if cycle exist then you cant cover all courses 
+// like 1-->>2 and 2-->>1 then a cycle and you cant complete courses
